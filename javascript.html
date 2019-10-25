@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div>
+        <h1>Coding4noobies Session1 Task list</h1>
+        <ul>
+            <li>Display the current time in the playground section</li>
+            <li>Implement the average algo in the playground section
+                <ul>
+                    <li>Create a form a text input where you can pass in the numbers, separated by comma</li>
+                    <li>Create a button that onClick calls the wrapCalculateAverage function</li>
+                    <li>Create an html tag with id=calculatedAverage that will be populated by the value calculated by the function</li>
+                    <li>Create the wrapCalculateAverage that: 
+                        <ul>
+                            <li>gets the string representing the comma separated numbers</li>
+                            <li>splits the string based on comma to create an array of strings</li>
+                            <li>Convers the string array into a nubmer array</li>
+                            <li>Passes the array to the existing calculateAverage function</li>
+                            <li>Gets the average and sets it in the calculatedAverage tag</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Just like before, implement Find the largest number in array algo. This time, instead of using onlick, use addEventListener</li>
+        </ul>
+    </div>
+    <div>
+        <h1>Playground</h1>
+        <div>
+            <p>Today's date is : <span id="date"></span></p>
+        </div>
+        <div>
+            <form>
+                <label for="numbersInput">Enter a list of comma separated numbers</label><br>
+                <input id="numbersInput" type="text" name="numbers" required><br>
+                <button type="button" onclick="wrapCalculateAverage()">Calculate average</button><br>
+            </form>
+            <p>The average is: <span id="calculatedAverage"></span></p>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        document.getElementById('date').innerHTML = new Date();
+
+        function wrapCalculateAverage() {
+            var numbersString = document.getElementById('numbersInput').value
+            var numberList = numbersString.split(',')
+            for (var i = 0; i < numberList.length; i++) {
+                numberList[i] = Number(numberList[i]);
+            }
+
+            var average = calculateAverage(numberList);
+            document.getElementById('calculatedAverage').innerHTML = average;
+        }
+
+        function calculateAverage(list) {
+            var sum = 0;
+            var count = list.length;
+            for (var i = 0; i < count; i++) {
+                sum += list[i];
+            }
+            return sum / count;
+        }
+
+
+    </script>
+</body>
+
+</html>
