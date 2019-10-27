@@ -4,9 +4,19 @@
 <head>
     <meta charset='utf-8'>
     <title>Coding4noobies Session1 Task list</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 
 <body>
+    <div>
+        <div id="loginDivId">
+            <a href="login.html">Login</a>
+        </div>
+        <div id="loggedinDivId" class="hidden">
+            <p>Welcome, <span id="username"></span></p>
+            <button type="button" onclick="logout()">Logout</button> 
+        </div>
+    </div>
     <div>
         <h1>Coding4noobies Session1 Task list</h1>
         <ul>
@@ -26,13 +36,13 @@
 
             <li>Create a link on this page that opens the image page in a new tab</li>
             <li>Create a new web page containg a contact form</li>
-                <ul>
-                    <li>Create firstname input of type text</li>
-                    <li>Create email input of type email</li>
-                    <li>Create age input of type number</li>
-                    <li>Create input of type submit</li>
-                    <li>Create gender select dropdown</li>
-                </ul>
+            <ul>
+                <li>Create firstname input of type text</li>
+                <li>Create email input of type email</li>
+                <li>Create age input of type number</li>
+                <li>Create input of type submit</li>
+                <li>Create gender select dropdown</li>
+            </ul>
             <li>Create a link on this page that opens the form page in a new tab</li>
             <li>Bonus: make the firstname field mandatory</li>
             <li>Bonus: add a default value to the email field</li>
@@ -62,6 +72,7 @@
         </p>
 
     </div>
+    <script src='main.js'></script>
 </body>
 
 </html>
