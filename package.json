@@ -1,0 +1,25 @@
+{
+  "name": "coding4noobies",
+  "version": "1.0.0",
+  "description": "Workshop support repo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/treaz/coding4noobies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/treaz/coding4noobies/issues"
+  },
+  "homepage": "https://github.com/treaz/coding4noobies#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {}
+}
